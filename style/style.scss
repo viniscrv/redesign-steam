@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$azulClaro: #0094FF;
+$azulEscuro: #1B2838;
+$azulBackground: #0E131E;
+$branco: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(21,24,41);
+    background: linear-gradient(9deg, rgba(21,24,41,1) 0%, rgba(27,40,56,1) 100%, rgba(90,68,128,1) 100%, rgba(161,0,33,1) 100%);
+    background-repeat: no-repeat;
+    font-family: 'Inter';
+    font-size: 18px;
+    color: $branco;
+}
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    .cabecalho__menu {
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+        ul {
+            display: flex;
+            list-style: none;
+            margin-left: 3em;
+            li {
+                margin-right: 2em;
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $branco;
+                    &:hover {
+                        color: $azulClaro;
+                        border-bottom: 2px solid $azulClaro;
+                        padding-bottom: .7em;
+                    }
+                }
+            }
+        }
+    }
+    .cabecalho__perfil {
+        display: flex;
+        align-items: center;
+        img {
+            margin: 0 1em;
+            cursor: pointer;
+        }
+        
+    }
+}
+.background {
+    position: relative;
+    height: 480px;    
+    background-image: linear-gradient(266.12deg, rgba(14, 19, 30, 0) 0%, rgba(14, 19, 30, 0.7) 47.21%, rgba(14, 19, 30, 0.7) 86.62%, rgba(14, 19, 30, 0) 100%), url(../img/reddeadbackground.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    .background__conteudo {
+        width: 400px;
+        position: absolute;
+        left: 200px;
+        top: 80px;
+        p {
+            margin: 1.5em 0;
+        }
+        button {
+            padding: 1.3em 3em;
+            background-color: $azulClaro;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+main {
+    width: 60%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .navegacao {
+        width: 100%;
+        background-color: $azulEscuro;
+        display: flex;
+        border-radius: 4px;
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 1.2em;
+            margin: 0 auto;
+            justify-content: space-around;
+            width: 100%;
+            li {
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $branco;
+                    &:hover {
+                        color: $azulClaro;
+                        border-bottom: 2px solid $azulClaro;
+                        padding-bottom: .7em;
+
+                    }
+                }
+            }
+        }
+    }
+    .pesquisar {
+        width: 100%;
+        margin: 1.5em 0;
+        input {
+            padding: 1.2em;
+            display: inline-block;
+            width: 100%;
+            background-color: $azulEscuro;
+            border: none;
+            border-radius: 4px;
+            color: $branco;
+            &::placeholder {
+                color: $branco;
+            }
+        }
+    }
+    .catalogo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .background-jogo {
+            position: relative;
+            &:hover {
+                filter: brightness(60%); 
+            }
+            .logo-jogo {
+                position: absolute;
+                bottom: 1em;
+                left: 3.8em;
+            }
+        }
+    }
+}
+footer {
+    padding: .7em;
+    background-color: $azulEscuro;
+    display: flex;
+    justify-content: center;
+}
+
